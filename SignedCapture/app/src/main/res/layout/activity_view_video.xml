@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Vertical Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.02"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.98"
+        android:orientation="vertical"/>
+
+    <!-- Horizontal Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.50"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.55"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.65"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.99"
+        android:orientation="horizontal"/>
+
+    <!-- Your original layout content below... -->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="376dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_10"
+       />
+
+    <ImageView
+        android:id="@+id/jpeg_view"
+        android:layout_width="376dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_10"
+        android:visibility="invisible"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#51504f"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_30"/>
+
+
+
+    <TextView
+        android:id="@+id/capture_city"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/montserrat_semibold"
+
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="10dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_25"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_10"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_30"/>
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="0dp"
+        android:src="@drawable/share"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_75"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_30"/>
+
+    <TextView
+        android:id="@+id/capture_device"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:scrollbars = "vertical"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_25"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_30"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_60"/>
+
+
+
+        <ExpandableListView
+            android:id="@+id/signature_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical_25"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_60"
+            />
+
+        <ImageView
+            android:id="@+id/capture_location"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical_25"
+            app:layout_constraintRight_toLeftOf="@id/guideline_vertical_75"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_90"
+            app:layout_constraintTop_toBottomOf="@id/signature_list"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

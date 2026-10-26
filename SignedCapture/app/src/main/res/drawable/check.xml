@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When selected, use grey -->
+    <item android:drawable="@drawable/start_record_media_v4"
+        android:state_checked="false" />
+    <!-- When not selected, use white-->
+    <item android:drawable="@drawable/recording_active_v2"
+        android:state_checked="true"/>
+
+</selector>

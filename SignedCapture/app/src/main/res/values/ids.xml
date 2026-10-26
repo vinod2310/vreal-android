@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textResult" type="id"/>
+    <item name="bottomAppBar" type="id"/>
+    <item name="textureView" type="id"/>
+    <item name="button_capture_video" type="id"/>
+    <item name="button_scan_qr" type="id"/>
+    <item name="bottom_bar_container" type="id"/>
+    <item name="button_container" type="id"/>
+    <item name="gap1" type="id"/>
+    <item name="gap2" type="id"/>
+    <item name="gap3" type="id"/>
+    <item name="recordTimer" type="id"/>
+    <item name="line5" type="id"/>
+    <item name="video_camera_icon" type="id"/>
+    <item name="still_camera_icon" type="id"/>
+    <item name="media_mode_toggle" type="id"/>
+
+
+
+
+
+</resources>

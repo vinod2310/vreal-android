@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">V-Real</string>
+    <string name="main_screen_welcome_message">Scan a QR code to access videos verified as real, human-recorded moments—no AI, just reality</string>
+</resources>

@@ -1,0 +1,25 @@
+# Gradle / Android Studio
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+*.iml
+.idea/
+.kotlin/
+
+# Build outputs
+*.apk
+*.aab
+
+# Secrets: copy the *.properties.example files instead
+signedcapture.properties
+kotlinqrscanner.properties
+keystore.properties
+*.jks
+*.keystore
+apk_keystore
+
+# OS
+.DS_Store

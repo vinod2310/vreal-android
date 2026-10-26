@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/line1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.65"/>
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_height="0dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vline1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vline2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vline3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.39"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vline4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60"/>
+    <ImageButton
+        android:id="@+id/switchCameraButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Switch camera"
+        app:layout_constraintLeft_toLeftOf="@+id/vline2"
+        app:layout_constraintTop_toTopOf="@+id/line2"
+        android:src="@drawable/switch_camera" />
+
+    <ImageButton
+        android:id="@+id/galleryPreview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:contentDescription="Nothing to say"
+        app:layout_constraintRight_toLeftOf="@+id/vline1"
+        app:layout_constraintTop_toTopOf="@+id/line2"
+        android:src="@drawable/logo_for_capture_page" />
+    <TextView
+        android:id="@+id/photoText"
+        android:layout_width="wrap_content"
+
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="VIDEO"
+        app:layout_constraintLeft_toLeftOf="@+id/vline1"
+        app:layout_constraintRight_toRightOf="@id/line3"
+        app:layout_constraintTop_toTopOf="@+id/line4"
+
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/videoText"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="PHOTO"
+        app:layout_constraintLeft_toLeftOf="@+id/vline4"
+        app:layout_constraintRight_toRightOf="@id/line3"
+        app:layout_constraintTop_toTopOf="@+id/line4"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <ToggleButton
+        android:id="@+id/recordToggle"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="75dp"
+        android:textOff=""
+        android:textOn=""
+        android:button="@drawable/check"
+        android:background="@color/zxing_transparent"
+        app:layout_constraintLeft_toLeftOf="@+id/vline1"
+        app:layout_constraintLeft_toRightOf="@+id/vline2"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        />
+
+    <Chronometer
+        android:id="@+id/recordTimer"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:visibility="invisible"
+        android:layout_marginStart="30dp"
+        app:layout_constraintLeft_toLeftOf="@+id/vline3"
+        app:layout_constraintRight_toRightOf="@+id/vline4"
+        app:layout_constraintTop_toBottomOf="@+id/recordToggle"
+        />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/line7"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"
+         />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mediaTypeSelector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@id/line4"
+        app:layout_constraintLeft_toLeftOf="@id/vline3"
+        app:layout_constraintRight_toRightOf="@id/vline4"
+        android:paddingTop="0dp"
+        android:paddingLeft="0dp">
+
+
+        <ImageButton
+            android:id="@+id/media_mode_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:src="@drawable/video_capture_selected_v2"
+            android:background="@color/zxing_transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+AWS_BUCKET_NAME=your-dev-bucket
+AWS_REGION=ap-southeast-2
+ANDROID_UNVERIFIED_VIDEO_BUCKET=your-unverified-video-bucket
+ANDROID_VERIFIED_VIDEO_BUCKET=your-verified-video-bucket
+ANDROID_UNVERIFIED_PHOTO_BUCKET=your-unverified-photo-bucket
+ANDROID_VERIFIED_PHOTO_BUCKET=your-verified-photo-bucket
+ANDROID_VERIFIED_VIDEO_BUCKET_URL_PREFIX=s3.ap-southeast-2.amazonaws.com
+ANDROID_VERIFIED_PHOTO_BUCKET_URL_PREFIX=s3.ap-southeast-2.amazonaws.com

@@ -1,0 +1,9 @@
+<resources>
+    <string  name="app_name">V-Real</string>
+    <string name="main_screen_welcome_message">REALITY\nVERIFIED</string>
+    <string name="video_signing">Signing.</string>
+    <string name="video_uploading">Uploading</string>
+    <string name="video_process_complete">Video signed and uploaded</string>
+    <string name="photo_processing">Processing image</string>
+    <string name="photo_capture_complete">Photo capture complete</string>
+</resources>
